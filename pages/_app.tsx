@@ -1,6 +1,7 @@
-import { Card } from '@/components/card';
+import { QuestCard } from '@/components/domain/questCard';
+import { Card } from '@/components/Ui/card';
 import GlobalStyle from '@/styles/GlobalStyles';
-import { darkTheme } from '@/styles/theme';
+import { darkTheme } from '@/styles/theme/theme';
 import { QueryClient, QueryClientConfig, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -33,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<ThemeProvider theme={darkTheme}>
 					<GlobalStyle />
 
-					<Card></Card>
+					<QuestCard></QuestCard>
 					<Component {...pageProps} />
 				</ThemeProvider>
 			</QueryClientProvider>
