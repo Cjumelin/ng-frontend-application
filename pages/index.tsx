@@ -1,3 +1,4 @@
+import { Card } from '@/components/card';
 import Head from 'next/head';
 
 export default function Home() {

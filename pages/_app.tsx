@@ -1,3 +1,4 @@
+import { Card } from '@/components/card';
 import GlobalStyle from '@/styles/GlobalStyles';
 import { darkTheme } from '@/styles/theme';
 import { QueryClient, QueryClientConfig, QueryClientProvider } from '@tanstack/react-query';
@@ -31,6 +32,8 @@ export default function App({ Component, pageProps }: AppProps) {
 			<QueryClientProvider client={queryClient}>
 				<ThemeProvider theme={darkTheme}>
 					<GlobalStyle />
+
+					<Card></Card>
 					<Component {...pageProps} />
 				</ThemeProvider>
 			</QueryClientProvider>
